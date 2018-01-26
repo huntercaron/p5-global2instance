@@ -24,5 +24,5 @@ module.exports = {
     sourceMapWithCode: true,
     comment: false
   },
-  instance: '$_p'
+  instance: 'sketch'
 }

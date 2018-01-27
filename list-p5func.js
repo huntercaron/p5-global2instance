@@ -276,6 +276,8 @@ const p5vars = [
   'QUARTER_PI',
   'TAU',
   'TWO_PI',
+  'DEGREES',
+  'RADIANS',
 
   // Environment
   'frameCount',

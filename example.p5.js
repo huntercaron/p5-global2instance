@@ -21,7 +21,9 @@ function draw () {
   // If it's time for a new point
   if (millis() > next && painting) {
 
-    // Grab mouse position      
+    // Grab mouse position
+    let d = TWO_PI;
+    let p = TWO_PI;
     current.x = mouseX;
     current.y = mouseY;
 

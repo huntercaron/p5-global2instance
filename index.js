@@ -60,10 +60,14 @@ module.exports = function (sourceCode, options = opts) {
   const source = esprima.parseModule(sourceCode, options.esprima)
 
   let vars = esquery(source, 'VariableDeclaration')
+  let globalVars = vars.filter(v => v.loc.start.column < 1);
   let funcs = esquery(source, 'FunctionDeclaration')
   let ast = template({
-    p5Main: vars.concat(wrapP5Funcs(funcs))
+    p5Main: globalVars.concat(wrapP5Funcs(funcs))
+    // p5Main: (wrapP5Funcs(funcs))
   })
+
+  // console.log(funcs);
 
   let output = escodegen.generate(ast, options.escodegen).code
   if (output.includes('p5.')) output = `import p5 from 'p5'\n${output}`

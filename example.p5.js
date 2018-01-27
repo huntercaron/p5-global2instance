@@ -13,6 +13,7 @@ function setup () {
   createCanvas(width, 400);
   current = createVector(0, 0);
   previous = createVector(0, 0);
+  angleMode(DEGREES);
 };
 
 function draw () {

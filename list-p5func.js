@@ -278,7 +278,8 @@ const p5vars = [
   'TWO_PI',
   'DEGREES',
   'RADIANS',
-  'CLOSE'
+  'CLOSE',
+  'BLUR'
 
   // Environment
   'frameCount',
